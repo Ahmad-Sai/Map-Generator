@@ -1,5 +1,13 @@
 # Perlin-Noise
 
+This program is a simple implementation of the Perlin Noise algorithim. Perlin Noise is a 
+
+
+Dependencies:
+  - Math Module
+  - Random Module
+  - NumPy
+  - MatPlotLib
 
 Layer 1 generated with 8 boxes (least detail)
 
