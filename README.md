@@ -29,7 +29,7 @@ Resulting layer sums all pervious layers to make a detailed image
 
 
 
-**_Example Maps Generated_**
+**_Example Maps Generated:_**
 
 ![image](https://user-images.githubusercontent.com/85080576/147283513-83b94222-adfa-4e43-9499-dcdb39bf4bb1.png)
 
