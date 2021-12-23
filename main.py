@@ -89,42 +89,44 @@ def makeNoise(num_boxes):
     return pixels
 
 
-def add_contrast(img,amt): # adds contrast to the image making dark pixels darker and light pixels lighter
+def add_contrast(img,amt): #change
     im2 = amt*(img-128)/128
     return 256 / (1 + np.exp(-1*im2))
 
 def make_map():
     # map 1
-    raw = make_noise(4)  # makes an array with noise using 4 boxes 
+    raw = makeNoise(4)  # makes an array with noise using 4 boxes 
 
     raw -= np.amin(raw)  # finds the minimum value in the array and ensures non negative pixels
     raw /= np.amax(raw)  # finds the maximum value in the array and normalizes the pixels
     final1 = 256*raw     # creates the rgb value for each pixel
 
     # map 2
-    raw2 = make_noise(16)
+    raw2 = makeNoise(16)
     
     raw2 -= np.amin(raw2)
     raw2 /= np.amax(raw2)
     final2 = 256*raw2
 
     # map 3
-    raw3 = make_noise(64)
+    raw3 = makeNoise(64)
     
     raw3 -= np.amin(raw3)
     raw3 /= np.amax(raw3)
     final3 = 256*raw3
     
-    completeMap = (0.4*final)+ (0.4*(final2))+ (0.2*(final3))    # adds all 3 maps on top of each other to create 1 map
+    completeMap = (0.4*final1)+ (0.4*(final2))+ (0.2*(final3))    # adds all 3 maps on top of each other to create 1 map
     added = add_contrast(completeMap,4)
     added -= np.amin(added)
     added /= np.amax(added)
     added = 256*added
     
-    #return added
     return completeMap
 
+
+# plots the generated noise
 completeMap = make_map()
+
 fig, ax = plt.subplots(figsize=(10,10))
 ax.imshow(completeMap, cmap='gray', vmin=0, vmax=256, interpolation='nearest')
 
@@ -134,10 +136,14 @@ def generate_map(noise, xdim, ydim):
         for y in range(ydim):
             if noise[x,y] < 105:
                 new_pixels[x,y] = [165,186,58] #green 
-            elif finalo[x,y] < 120:
+            elif noise[x,y] < 120:
                 new_pixels[x,y] = [245,219,136] #yellow
             else:
                 new_pixels[x,y] = [0,70,170] #blue
     return new_pixels
 
-generate_map(completeMap, 512, 512)
+# plots the generated map
+gm = generate_map(completeMap, 512, 512)
+
+fig, ax = plt.subplots(figsize=(10,10))
+ax.imshow(gm/256, vmin=0, vmax=256, interpolation='nearest')
