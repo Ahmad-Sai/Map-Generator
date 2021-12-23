@@ -1,6 +1,6 @@
 # Perlin-Noise
 
-This program is a simple implementation of the Perlin Noise algorithim. Perlin Noise is a 
+This program is a simple implementation of the Perlin Noise algorithim. The Perlin Noise algorithm is used to generate natural looking textures using noise.
 
 
 Dependencies:
