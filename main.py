@@ -89,7 +89,7 @@ def makeNoise(num_boxes):
     return pixels
 
 
-def add_contrast(img,amt): #change
+def add_contrast(img,amt): # adds contrast to the image making dark pixels darker and light pixels lighter
     im2 = amt*(img-128)/128
     return 256 / (1 + np.exp(-1*im2))
 
@@ -127,3 +127,17 @@ def make_map():
 completeMap = make_map()
 fig, ax = plt.subplots(figsize=(10,10))
 ax.imshow(completeMap, cmap='gray', vmin=0, vmax=256, interpolation='nearest')
+
+def generate_map(noise, xdim, ydim):
+    new_pixels = np.zeros((512,512,3))
+    for x in range(xdim):
+        for y in range(ydim):
+            if noise[x,y] < 105:
+                new_pixels[x,y] = [165,186,58] #green 
+            elif finalo[x,y] < 120:
+                new_pixels[x,y] = [245,219,136] #yellow
+            else:
+                new_pixels[x,y] = [0,70,170] #blue
+    return new_pixels
+
+generate_map(completeMap, 512, 512)
