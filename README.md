@@ -3,6 +3,7 @@
 This program is a simple implementation of the Perlin Noise algorithim. The Perlin Noise algorithm is used to generate natural looking textures using noise. Maps created using the perlin noise algorithim can be used to generate map terrians or biomes in video games.
 
 _Example of Value Noise vs. Perlin Noise_
+
 ![image](https://user-images.githubusercontent.com/85080576/147285124-85331080-9a53-4a0f-bb75-76a94dc62881.png)
 
 
