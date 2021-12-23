@@ -10,7 +10,9 @@ Dependencies:
   - MatPlotLib
 
 Layer 1 generated with 8 boxes (least detail)
+
 Layer 2 generated with 16 boxes (medium detail)
+
 Layer 3 generated with 32 boxes (most detail)
 
 Resulting layer sums all pervious layers to make a detailed image
