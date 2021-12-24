@@ -130,6 +130,8 @@ completeMap = make_map()
 fig, ax = plt.subplots(figsize=(10,10))
 ax.imshow(completeMap, cmap='gray', vmin=0, vmax=256, interpolation='nearest')
 
+
+# uses the generated noise to make a map
 def generate_map(noise, xdim, ydim):
     new_pixels = np.zeros((512,512,3))
     for x in range(xdim):
