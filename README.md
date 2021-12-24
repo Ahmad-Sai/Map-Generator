@@ -34,3 +34,6 @@ Resulting layer sums all pervious layers to make a detailed image
 ![image](https://user-images.githubusercontent.com/85080576/147283513-83b94222-adfa-4e43-9499-dcdb39bf4bb1.png)
 
 ![image](https://user-images.githubusercontent.com/85080576/147316273-48af27ea-4ecf-457e-9853-2b2f07570a31.png)
+
+![image](https://user-images.githubusercontent.com/85080576/147316346-82c7839d-c608-4c42-aea1-d8505dcc589e.png)
+
