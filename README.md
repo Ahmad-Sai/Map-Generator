@@ -6,14 +6,11 @@ This program is a simple implementation of the Perlin Noise algorithim. The Perl
 
 ![image](https://user-images.githubusercontent.com/85080576/147285124-85331080-9a53-4a0f-bb75-76a94dc62881.png)
 
-
-
 Dependencies:
   - Math Module
   - Random Module
   - NumPy
   - MatPlotLib
-
 
 _**Noise Generated:**_
 
