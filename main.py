@@ -6,7 +6,6 @@ import matplotlib.pyplot as plt
 xdim = 1024  # x dimension of image
 ydim = 1024  # y dimension of image
 
-
 # smooths the noise using interpolation
 def fade(t):
     return 3*(t**2) -2*(t**3)
@@ -129,10 +128,6 @@ completeMap = make_map()
 
 fig, ax = plt.subplots(figsize=(10,10))
 ax.imshow(completeMap, cmap='gray', vmin=0, vmax=256, interpolation='nearest')
-
-
-
-
 
 # uses the generated noise to make a map
 def generate_map(noise, xdim, ydim):
