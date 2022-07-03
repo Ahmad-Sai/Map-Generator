@@ -131,17 +131,20 @@ fig, ax = plt.subplots(figsize=(10,10))
 ax.imshow(completeMap, cmap='gray', vmin=0, vmax=256, interpolation='nearest')
 
 
+
+
+
 # uses the generated noise to make a map
 def generate_map(noise, xdim, ydim):
     new_pixels = np.zeros((512,512,3))
     for x in range(xdim):
         for y in range(ydim):
-            if noise[x,y] < 105:
-                new_pixels[x,y] = [165,186,58] #green 
+            if noise[x,y] < 105: # change the values to created different patterns
+                new_pixels[x,y] = [165,186,58] #green (change the rgb values to whatever colors you want)
             elif noise[x,y] < 120:
-                new_pixels[x,y] = [245,219,136] #yellow
+                new_pixels[x,y] = [245,219,136] #yellow (change the rgb values to whatever colors you want)
             else:
-                new_pixels[x,y] = [0,70,170] #blue
+                new_pixels[x,y] = [0,70,170] #blue (change the rgb values to whatever colors you want)
     return new_pixels
 
 # plots the generated map
